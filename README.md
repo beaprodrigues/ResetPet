@@ -2,7 +2,7 @@
 
 Site de e-commerce desenvolvido para a **ResetPet**, uma marca de produtos naturais e moduladores biofísicos para pets. O projeto engloba desde uma interface de usuário moderna e fluida até um back-end seguro para gerenciamento de contas, carrinho de compras e processamento de pagamentos.
 
-## Destaques Técnicos (Arquitetura e Decisões)
+## Destaques Técnicos
 
 Este projeto foi construído sem o uso de frameworks pesados de front-end (como React ou Vue), focando em performance, acessibilidade e domínio dos fundamentos da web. 
 
