@@ -1,0 +1,634 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ResetPet — Produtos premium para pets com design moderno e funcional." />
+  <meta name="theme-color" content="#141210" />
+  <title>ResetPet | Vida com estilo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="#" class="header-logo"><img src="img/logo.png" alt="ResetPet" /></a>
+
+      <div class="header-actions">
+        <button class="btn-icon" id="search-toggle" aria-label="Buscar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="btn-icon cart-btn" aria-label="Carrinho">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 01-8 0"></path>
+          </svg>
+          <span class="cart-badge" id="cart-count">0</span>
+        </button>
+        <button class="btn-icon" id="account-toggle" aria-label="Minha conta" title="Minha conta">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="8" r="4"></circle>
+            <path d="M5 21a7 7 0 0 1 14 0"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-bar" id="search-bar">
+      <input type="text" placeholder="Buscar produtos…" class="search-input" id="search-input" />
+      <button class="search-close" id="search-close" aria-label="Fechar busca">✕</button>
+    </div>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-video-wrap">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="img/1.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <span class="hero-eyebrow">Moduladores Biofísicos</span>
+      <h1 class="hero-title">Feito para<br /><em>quem vive</em><br />com liberdade.</h1>
+      <p class="hero-sub">O que seu pet merece,</br>Com a qualidade que você exige.</p>
+      <div class="hero-cta">
+        <a href="#produtos" class="btn btn--primary">Ver produtos</a>
+        <a href="#video" class="btn btn--ghost"><span class="play-dot"></span> Assistir vídeo</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>FRETE GRÁTIS ACIMA DE R$499</span>
+      <span>•</span>
+      <span>FEITOS NO BRASIL</span>
+      <span>•</span>
+      <span>NOVIDADES TODA SEMANA</span>
+      <span>•</span>
+      <span>PRODUTOS NATURAIS</span>
+      <span>•</span>
+      <span>5% DE DESCONTO EM COMPRAS ACIMA DE R$299,90</span>
+      <span>•</span>
+      <span>FEITOS NO BRASIL</span>
+      <span>•</span>
+      <span>NOVIDADES TODA SEMANA</span>
+      <span>•</span>
+      <span>PRODUTOS NATURAIS</span>
+      <span>•</span>
+    </div>
+  </div>
+
+  <div class="reseller-strip">
+    <span>Você é pet shop, veterinário ou revendedor?</span>
+    <a href="#parceiros" class="reseller-strip-link">Conheça nossos planos de parceria →</a>
+  </div>
+
+  <!-- LINHA COMPLETA DE PRODUTOS -->
+  <section class="linha-section" id="produtos">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">Moduladores Biofísicos</span>
+          <h2 class="section-title">Nossa linha completa</h2>
+        </div>
+        <p class="linha-intro">10 produtos desenvolvidos para o equilíbrio, bem-estar e qualidade de vida do seu pet.</p>
+      </div>
+
+      <div class="linha-grid">
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/desparasitacao.png" alt="Desparasitação" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Desparasitação</h3>
+            <p class="linha-card-desc">Frequenciado desenvolvido para integrar protocolos de cuidado voltados ao equilíbrio do ambiente interno e ao bem-estar geral do pet.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="desparasitacao">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/gastro-intestin.png" alt="Pet Gastro Intestin" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Pet Gastro Intestin</h3>
+            <p class="linha-card-desc">Frequenciado desenvolvido para suporte ao bem-estar gastrointestinal e à manutenção de uma rotina digestiva equilibrada.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="gastro-intestin">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/pet-calm.png" alt="Pet Calm" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Pet Calm</h3>
+            <p class="linha-card-desc">Frequenciado desenvolvido para favorecer tranquilidade, adaptação e equilíbrio comportamental em situações que alteram a rotina do pet.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="pet-calm">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/longevidade.png" alt="Longevidade" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Longevidade</h3>
+            <p class="linha-card-desc">Frequenciado desenvolvido como suporte complementar ao bem-estar, vitalidade e qualidade de vida do pet ao longo das diferentes fases da vida.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="longevidade">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/nutri-pet.png" alt="Pet Nutri" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Pet Nutri</h3>
+            <p class="linha-card-desc">Frequenciado desenvolvido para integrar os cuidados relacionados à nutrição, vitalidade e equilíbrio geral do organismo.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="pet-nutri">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/pet-bucal.png" alt="Pet Bucal" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Pet Bucal</h3>
+            <p class="linha-card-desc">Frequenciado desenvolvido para integrar a rotina de cuidados e bem-estar da cavidade oral do pet.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="pet-bucal">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/cura-trauma.png" alt="Pet Cura Trauma" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Pet Cura Trauma</h3>
+            <p class="linha-card-desc">Frequenciado desenvolvido para oferecer suporte ao equilíbrio emocional e à adaptação do pet diante de experiências desafiadoras e mudanças de rotina.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="pet-cura-trauma">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/biofisico.png" alt="Detox RESET Biofísico" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Detox RESET Biofísico</h3>
+            <p class="linha-card-desc">Frequenciado desenvolvido para integrar protocolos de reorganização e equilíbrio do bem-estar do pet.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="detox-reset-biofisico">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/pet-sem-alergia.png" alt="Pet sem Alergia" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Pet sem Alergia</h3>
+            <p class="linha-card-desc">Frequenciado desenvolvido como suporte complementar ao conforto e bem-estar do pet, especialmente em rotinas de cuidados com animais sensíveis.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="pet-sem-alergia">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+        <article class="linha-card">
+          <div class="linha-card-img-wrap">
+            <img src="img/prata-coloidal.png" alt="Prata Coloidal 10 ppm Pet" loading="lazy" />
+          </div>
+          <div class="linha-card-body">
+            <h3 class="linha-card-name">Prata Coloidal 10 ppm Pet</h3>
+            <p class="linha-card-desc">Propriedades antibacterianas, antivirais e antifúngicas para o cuidado e proteção natural do seu pet.</p>
+            <p class="linha-card-price">R$ 99,90</p>
+            <button class="btn btn--primary linha-card-buy btn-add" data-product-id="prata-coloidal-10-ppm">Adicionar ao carrinho</button>
+          </div>
+        </article>
+
+      </div><!-- /linha-grid -->
+    </div>
+  </section>
+
+  <!-- SEÇÃO QUIZ -->
+  <section class="quiz-section" id="quiz">
+    <div class="container">
+      <div class="section-header quiz-header">
+        <div>
+          <span class="section-eyebrow">Para o seu pet</span>
+          <h2 class="section-title">Descubra o que seu<br /><em class="quiz-title-em">pet precisa</em></h2>
+        </div>
+        <p class="quiz-intro-text">Responda 5 perguntas rápidas e receba uma recomendação personalizada direto no WhatsApp.</p>
+      </div>
+
+      <!-- Barra de progresso -->
+      <div class="quiz-progress-wrap">
+        <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+      </div>
+
+      <!-- Etapas do quiz -->
+      <div class="quiz-steps" id="quiz-steps">
+
+        <!-- Passo 1 -->
+        <div class="quiz-step active" data-step="1">
+          <p class="quiz-question">Qual é o tipo do seu pet?</p>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-key="especie" data-val="cachorro">Cachorro</button>
+            <button class="quiz-opt" data-key="especie" data-val="gato">Gato</button>
+            <button class="quiz-opt" data-key="especie" data-val="outro">Outro</button>
+          </div>
+        </div>
+
+        <!-- Passo 2 -->
+        <div class="quiz-step" data-step="2">
+          <p class="quiz-question">Qual é a idade do seu pet?</p>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-key="idade" data-val="filhote">Filhote (0–1 ano)</button>
+            <button class="quiz-opt" data-key="idade" data-val="adulto">Adulto (1–7 anos)</button>
+            <button class="quiz-opt" data-key="idade" data-val="senior">Sênior (7+ anos)</button>
+          </div>
+        </div>
+
+        <!-- Passo 3 -->
+        <div class="quiz-step" data-step="3">
+          <p class="quiz-question">Qual o principal desafio do seu pet?</p>
+          <div class="quiz-options quiz-options--2col">
+            <button class="quiz-opt" data-key="desafio" data-val="ansiedade">Ansiedade e estresse</button>
+            <button class="quiz-opt" data-key="desafio" data-val="alergia">Alergias na pele</button>
+            <button class="quiz-opt" data-key="desafio" data-val="longevidade">Longevidade e energia</button>
+            <button class="quiz-opt" data-key="desafio" data-val="imunidade">Imunidade baixa</button>
+          </div>
+        </div>
+
+        <!-- Passo 4 -->
+        <div class="quiz-step" data-step="4">
+          <p class="quiz-question">Já usou suplementos ou produtos naturais antes?</p>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-key="experiencia" data-val="sim">Sim, com bons resultados</button>
+            <button class="quiz-opt" data-key="experiencia" data-val="tentou">Tentei, mas sem resultado</button>
+            <button class="quiz-opt" data-key="experiencia" data-val="nao">Ainda não usei</button>
+          </div>
+        </div>
+
+        <!-- Passo 5 -->
+        <div class="quiz-step" data-step="5">
+          <p class="quiz-question">Como prefere comprar?</p>
+          <div class="quiz-options">
+            <button class="quiz-opt" data-key="compra" data-val="online">Pelo site, online</button>
+            <button class="quiz-opt" data-key="compra" data-val="whatsapp">Prefiro falar antes</button>
+            <button class="quiz-opt" data-key="compra" data-val="loja">Em uma loja parceira</button>
+          </div>
+        </div>
+
+        <!-- Resultado -->
+        <div class="quiz-step quiz-result" data-step="resultado" id="quiz-result">
+          <div class="quiz-result-icon">✅</div>
+          <h3 class="quiz-result-title" id="quiz-result-title">Encontramos o ideal para o seu pet!</h3>
+          <p class="quiz-result-text" id="quiz-result-text"></p>
+          <a href="#" class="btn btn--primary quiz-whatsapp-btn" id="quiz-whatsapp-btn" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.535 4.05 1.472 5.762L0 24l6.41-1.426A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.373l-.36-.214-3.727.828.838-3.641-.234-.374A9.778 9.778 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182c5.424 0 9.818 4.393 9.818 9.818 0 5.424-4.394 9.818-9.818 9.818z"/></svg>
+            Falar com especialista no WhatsApp
+          </a>
+          <button class="quiz-restart" id="quiz-restart">↩ Refazer questionário</button>
+        </div>
+
+      </div><!-- /quiz-steps -->
+    </div>
+  </section>
+
+  <!-- SEÇÃO PARCEIROS -->
+  <section class="partners-section" id="parceiros">
+    <div class="container">
+      <div class="section-header partners-header">
+        <div>
+          <span class="section-eyebrow">Programa de parceria</span>
+          <h2 class="section-title">Revenda a ResetPet.<br />Cresça com a gente.</h2>
+        </div>
+        <p class="partners-intro-text">Pet shops, veterinários, casas de ração e profissionais da área pet podem se tornar revendedores com condições exclusivas por volume de compra.</p>
+      </div>
+
+      <div class="partners-grid">
+
+        <!-- Plano Iniciante -->
+        <div class="partner-card" data-reveal>
+          <div class="partner-card-header">
+            <span class="partner-badge">Iniciante</span>
+          </div>
+          <h3 class="partner-plan-name">Parceiro Essencial</h3>
+          <p class="partner-plan-desc">Ideal para quem está começando a revender ou quer testar o produto com sua clientela.</p>
+          <ul class="partner-benefits">
+            <li>✓ A partir de <strong>R$ 500</strong> por pedido</li>
+            <li>✓ <strong>10% de desconto</strong> sobre o preço de tabela</li>
+            <li>✓ Frete reduzido</li>
+            <li>✓ Material de divulgação digital</li>
+          </ul>
+          <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20Plano%20Essencial%20de%20parceria%20da%20ResetPet." class="btn btn--dark partner-cta" target="_blank" rel="noopener">Quero ser parceiro</a>
+          <!-- 👆 PLACEHOLDER: troque 5500000000000 pelo número real da cliente (55 + DDD + número) -->
+        </div>
+
+        <!-- Plano Profissional -->
+        <div class="partner-card partner-card--featured" data-reveal>
+          <div class="partner-card-header">
+            <span class="partner-badge partner-badge--featured">Mais popular</span>
+          </div>
+          <h3 class="partner-plan-name">Parceiro Profissional</h3>
+          <p class="partner-plan-desc">Para pet shops e revendedores com clientela ativa. Melhores condições e suporte dedicado.</p>
+          <ul class="partner-benefits">
+            <li>✓ A partir de <strong>R$ 1.500</strong> por pedido</li>
+            <li>✓ <strong>20% de desconto</strong> sobre o preço de tabela</li>
+            <li>✓ Frete grátis</li>
+            <li>✓ Suporte prioritário</li>
+            <li>✓ Materiais físicos de PDV</li>
+          </ul>
+          <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20Plano%20Profissional%20de%20parceria%20da%20ResetPet." class="btn btn--primary partner-cta" target="_blank" rel="noopener">Quero ser parceiro</a>
+          <!-- 👆 PLACEHOLDER: troque 5500000000000 pelo número real da cliente -->
+        </div>
+
+        <!-- Plano Premium -->
+        <div class="partner-card" data-reveal>
+          <div class="partner-card-header">
+            <span class="partner-badge">Premium</span>
+          </div>
+          <h3 class="partner-plan-name">Parceiro Premium</h3>
+          <p class="partner-plan-desc">Para distribuidores e grandes revendedores. Condições especiais e exclusividade regional.</p>
+          <ul class="partner-benefits">
+            <li>✓ A partir de <strong>R$ 5.000</strong> por pedido</li>
+            <li>✓ <strong>30% de desconto</strong> sobre o preço de tabela</li>
+            <li>✓ Frete grátis + prioridade no estoque</li>
+            <li>✓ Gerente de conta exclusivo</li>
+            <li>✓ Possibilidade de exclusividade regional</li>
+          </ul>
+          <a href="https://wa.me/5500000000000?text=Olá!%20Tenho%20interesse%20no%20Plano%20Premium%20de%20parceria%20da%20ResetPet." class="btn btn--dark partner-cta" target="_blank" rel="noopener">Quero ser parceiro</a>
+          <!-- 👆 PLACEHOLDER: troque 5500000000000 pelo número real da cliente -->
+        </div>
+
+      </div><!-- /partners-grid -->
+
+      <p class="partners-note">Todos os planos estão sujeitos a aprovação de cadastro. <a href="https://wa.me/5500000000000?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20programa%20de%20parceiros%20da%20ResetPet." target="_blank" rel="noopener">Fale com a gente →</a></p>
+    </div>
+  </section>
+
+  <section class="lifestyle" id="video">
+    <div class="lifestyle-video-col">
+      <div class="lifestyle-video-wrap" id="video-wrap">
+        <video
+          id="lifestyle-thumb"
+          class="lifestyle-thumb"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+        >
+          <source src="img/2.mp4" type="video/mp4" />
+        </video>
+        <button class="play-btn" id="play-btn" aria-label="Reproduzir vídeo">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        </button>
+      </div>
+    </div>
+    <div class="lifestyle-text-col">
+      <span class="lifestyle-eyebrow">Nosso mundo</span>
+      <h2 class="lifestyle-title">Mais do que produtos.<br />É um estilo de vida.</h2>
+      <p class="lifestyle-body">
+        Acreditamos que pets e tutores merecem produtos que combinam com quem eles são.
+        Qualidade pensada para quem vive com intensidade — na rua, na praia, em casa.
+      </p>
+      <ul class="lifestyle-bullets">
+        <li> Produtos naturais</li>
+        <li> Produtos exclusivos 100% brasileiro</li>
+        <li> Parceria com ONGs e profissionais de bem-estar animal</li>
+      </ul>
+      <a href="#" class="btn btn--dark">Nossa história</a>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="cta-banner-inner">
+      <h2 class="cta-banner-title">Assine nossa newsletter</h2>
+      <p class="cta-banner-sub">Novidades, lançamentos e ofertas exclusivas direto no seu e-mail.</p>
+      <form class="cta-banner-form" id="newsletter-form">
+        <input type="email" placeholder="seu@email.com" class="cta-input" required />
+        <button type="submit" class="btn btn--primary">Quero receber</button>
+      </form>
+      <span class="cta-banner-ok" id="newsletter-ok">✓ Inscrito! Obrigado.</span>
+    </div>
+  </section>
+
+  <section class="about" id="sobre">
+    <div class="container about-grid">
+      <div class="about-text">
+        <span class="section-eyebrow">Sobre a ResetPet</span>
+        <h2 class="section-title">Feito por quem tem pet.<br />Para quem vive pet.</h2>
+        <p>Nascemos no interior de São Paulo com uma missão simples: criar produtos que respeitem a personalidade, o bem estar do pet e de quem cuida deles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="feedback-section" aria-labelledby="feedback-title">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <span class="section-eyebrow">Quem vive essa experiência</span>
+          <h2 class="section-title" id="feedback-title">Comentários de clientes</h2>
+        </div>
+      </div>
+      <div class="feedback-grid">
+        <figure class="feedback-card">
+          <blockquote class="feedback-quote">“[Insira aqui um comentário real e autorizado do cliente.]”</blockquote>
+          <figcaption class="feedback-author">Cliente 1 <span>(substituir)</span></figcaption>
+        </figure>
+        <figure class="feedback-card">
+          <blockquote class="feedback-quote">“[Adicione aqui outro feedback real sobre a experiência de compra.]”</blockquote>
+          <figcaption class="feedback-author">Cliente 2 <span>(substituir)</span></figcaption>
+        </figure>
+        <figure class="feedback-card">
+          <blockquote class="feedback-quote">“[Use este espaço para um terceiro depoimento autorizado.]”</blockquote>
+          <figcaption class="feedback-author">Cliente 3 <span>(substituir)</span></figcaption>
+        </figure>
+        <figure class="feedback-card">
+          <blockquote class="feedback-quote">“[Adicione aqui mais um comentário real e autorizado.]”</blockquote>
+          <figcaption class="feedback-author">Cliente 4 <span>(substituir)</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="footer-brand">
+          <a href="#" class="footer-logo"><img src="img/logo branco.png" alt="ResetPet" /></a>
+        <p>Design que seu pet merece.<br />Qualidade que você exige.</p>
+        <div class="footer-contact-quick">
+          <p><strong>Fale conosco</strong></p>
+          <p>contato@resetpet.com</p>
+          <p>(12) 9999-9999</p>
+        </div>
+      </div>
+      <nav class="footer-nav" aria-label="Menu do rodapé">
+        <div class="footer-col">
+          <h4>Loja</h4>
+          <ul>
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#produtos">Nossa linha</a></li>
+            <li><a href="#video">Estilo de vida</a></li>
+            <li><a href="#">Promoções</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <ul>
+            <li><a href="#">Meus pedidos</a></li>
+            <li><a href="#">Trocas e devoluções</a></li>
+            <li><a href="#">Frete e entrega</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Sobre</h4>
+          <ul>
+            <li><a href="#sobre">Sobre nós</a></li>
+            <li><a href="#">Sustentabilidade</a></li>
+            <li><a href="#">Parcerias</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Redes Sociais</h4>
+          <ul>
+            <li><a href="https://instagram.com/resetpetoficial" target="_blank">Instagram</a></li>
+            <li><a href="https://tiktok.com/@resetpetoficial" target="_blank">TikTok</a></li>
+            <li><a href="https://facebook.com/resetpetoficial" target="_blank">Facebook</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="footer-middle">
+      <div class="container">
+        <div class="footer-legal">
+          <a href="#">Termos de Uso</a>
+          <span>•</span>
+          <a href="#">Política de Privacidade</a>
+          <span>•</span>
+          <a href="#">Política de Cookies</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <span>© 2026 ResetPet. Todos os direitos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-drawer-header">
+      <h3>Meu carrinho</h3>
+      <button class="cart-drawer-close" id="cart-close">✕</button>
+    </div>
+    <div class="cart-drawer-items" id="cart-items">
+      <p class="cart-empty">Seu carrinho está vazio.</p>
+    </div>
+    <div class="cart-drawer-footer" id="cart-footer" style="display:none">
+      <div class="cart-summary">
+        <div class="cart-summary-row">
+          <span>Subtotal</span>
+          <span id="cart-subtotal">R$ 0,00</span>
+        </div>
+        <div class="cart-summary-row cart-summary-row--discount">
+          <span>Desconto (5%)</span>
+          <span id="cart-discount">− R$ 0,00</span>
+        </div>
+        <div class="cart-total">
+          <span>Total</span>
+          <span id="cart-total">R$ 0,00</span>
+        </div>
+      </div>
+      <button class="btn btn--primary w-full" id="checkout-button">Finalizar compra</button>
+      <p class="checkout-status" id="checkout-status" role="status" aria-live="polite"></p>
+    </div>
+  </aside>
+
+  <dialog class="account-dialog" id="account-dialog" aria-labelledby="account-title">
+    <div class="account-dialog-header">
+      <h2 id="account-title">Minha conta</h2>
+      <button class="account-close" id="account-close" type="button" aria-label="Fechar">✕</button>
+    </div>
+
+    <div class="account-guest" id="account-guest">
+      <div class="account-tabs" role="tablist" aria-label="Acesso à conta">
+        <button class="account-tab active" id="account-login-tab" type="button" role="tab" aria-selected="true">Entrar</button>
+        <button class="account-tab" id="account-register-tab" type="button" role="tab" aria-selected="false">Criar conta</button>
+      </div>
+
+      <form class="account-form" id="account-login-form">
+        <label for="account-login-email">E-mail</label>
+        <input id="account-login-email" name="email" type="email" autocomplete="email" required maxlength="254" />
+        <label for="account-login-password">Senha</label>
+        <input id="account-login-password" name="password" type="password" autocomplete="current-password" required maxlength="128" />
+        <button class="btn btn--primary w-full" type="submit">Entrar</button>
+      </form>
+
+      <form class="account-form" id="account-register-form" hidden>
+        <label for="account-register-name">Nome</label>
+        <input id="account-register-name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="80" />
+        <label for="account-register-email">E-mail</label>
+        <input id="account-register-email" name="email" type="email" autocomplete="email" required maxlength="254" />
+        <label for="account-register-password">Senha</label>
+        <input id="account-register-password" name="password" type="password" autocomplete="new-password" required minlength="10" maxlength="128" />
+        <small>Use pelo menos 10 caracteres.</small>
+        <button class="btn btn--primary w-full" type="submit">Criar conta</button>
+      </form>
+      <p class="account-status" id="account-status" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="account-member" id="account-member" hidden>
+      <div class="account-member-header">
+        <div>
+          <span class="section-eyebrow">Conta conectada</span>
+          <h3 id="account-name"></h3>
+          <p id="account-email"></p>
+        </div>
+        <button class="account-logout" id="account-logout" type="button">Sair</button>
+      </div>
+
+      <section class="account-orders" aria-labelledby="account-orders-title">
+        <h3 id="account-orders-title">Meus pedidos</h3>
+        <div id="account-orders-list" aria-live="polite"><p>Carregando pedidos...</p></div>
+      </section>
+
+      <aside class="account-plan-note">
+        <h3>Planos de parceria</h3>
+        <p>Os planos de parceria são tratados com a equipe ResetPet e ainda não são assinaturas vinculadas a esta conta.</p>
+      </aside>
+    </div>
+  </dialog>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="/js/main.mjs"></script>
+</body>
+</html>
