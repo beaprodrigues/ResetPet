@@ -1,38 +1,40 @@
-# 🐾 ResetPet - E-commerce Platform
+# ResetPet - E-commerce
 
-Plataforma completa de e-commerce desenvolvida para a **ResetPet**, uma marca de produtos naturais e moduladores biofísicos para pets. O projeto engloba desde uma interface de usuário moderna e fluida até um back-end seguro para gerenciamento de contas, carrinho de compras e processamento de pagamentos.
+Site de e-commerce desenvolvido para a **ResetPet**, uma marca de produtos naturais e moduladores biofísicos para pets. O projeto engloba desde uma interface de usuário moderna e fluida até um back-end seguro para gerenciamento de contas, carrinho de compras e processamento de pagamentos.
 
-## 💻 Destaques Técnicos (Arquitetura e Decisões)
+## Destaques Técnicos (Arquitetura e Decisões)
 
-Este projeto foi construído sem o uso de frameworks pesados de front-end (como React ou Vue), focando em performance, acessibilidade e no domínio dos fundamentos da web. 
+Este projeto foi construído sem o uso de frameworks pesados de front-end (como React ou Vue), focando em performance, acessibilidade e domínio dos fundamentos da web. 
 
-* **Front-end Modular:** JavaScript Vanilla organizado no padrão *Revealing Module Pattern* (ex: `CartModule`, `QuizModule`, `RevealModule`), garantindo isolamento de escopo e fácil manutenção.
-* **Performance e UI/UX:** Uso intensivo de CSS Custom Properties (Variáveis), animações CSS otimizadas, manipulação limpa de DOM e `IntersectionObserver` para revelar elementos na rolagem e carregar estatísticas dinamicamente.
-* **Autenticação Customizada:** Sistema de login e sessão construído do zero, utilizando a biblioteca nativa `node:crypto`. As senhas são protegidas com hash `scrypt` e `salt` dinâmico, e o gerenciamento de sessão é feito via cookies `HttpOnly` com validade de 14 dias.
-* **Banco de Dados:** Utilização do SQLite (via `better-sqlite3`) com modo `WAL` habilitado para alta performance em leituras/escritas concorrentes, gerenciando usuários, sessões e histórico de pedidos.
-* **Integração de Pagamentos:** Checkout seguro integrado à API da **Stripe**, incluindo o recebimento de Webhooks (`checkout.session.completed`, etc.) para atualização assíncrona do status dos pedidos.
+* **Front-end:** JavaScript organizado no padrão *Revealing Module Pattern* (ex: `CartModule`, `QuizModule`, `RevealModule`), garantindo isolamento de escopo e fácil manutenção.
+* **Performance e UI/UX:** Uso intensivo de CSS (Variáveis), animações CSS otimizadas, manipulação limpa de DOM e `IntersectionObserver` para revelar elementos na rolagem e carregar estatísticas dinamicamente.
+* **Autenticação:** Sistema de login e sessão construído do zero, utilizando a biblioteca nativa `node:crypto`. As senhas são protegidas com hash `scrypt` e `salt` dinâmico, e o gerenciamento de sessão é feito via cookies `HttpOnly` com validade de 14 dias.
+* **Banco de Dados:** Utilização do SQLite com modo `WAL` habilitado para performance em leituras/escritas concorrentes, gerenciando usuários, sessões e histórico de pedidos.
+* **Integração de Pagamentos:** Checkout seguro integrado à API da **Stripe**, incluindo o recebimento de Webhooks para atualização do status dos pedidos.
 
-## ✨ Funcionalidades
+## Funcionalidades
 
-* **Catálogo e Carrinho Dinâmico:** Adição e remoção de produtos em tempo real com atualização de interface e cálculo de totais.
-* **Quiz Interativo:** Questionário em 5 etapas para recomendar o melhor produto para o pet, com redirecionamento inteligente para o WhatsApp pré-preenchendo as respostas.
+* **Catálogo e Carrinho:** Adição e remoção de produtos em tempo real com atualização de interface e cálculo de valores (R$) totais.
+* **Quiz Interativo:** Questionário em 5 etapas para recomendar o melhor produto para o pet, com redirecionamento inteligente para o WhatsApp, pré-preenchendo as respostas.
 * **Área do Cliente:** Cadastro, login e consulta de histórico de pedidos integrado ao banco de dados.
-* **Design Responsivo e Parallax:** Interface fluida que se adapta a qualquer tela, complementada com efeitos visuais modernos.
+* **Design Responsivo:** Interface fluida que com adaptação de tela, complementada com efeitos visuais modernos.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 **Front-end:**
-* HTML5 Semântico
-* CSS3 (Grid, Flexbox, BEM methodology adaptada, Variáveis Globais)
-* JavaScript Vanilla (ES6+ Modules)
+* HTML5 
+* CSS3 (Grid, Flexbox, Variáveis)
+* JavaScript (ES6+)
 
 **Back-end:**
-* [Node.js](https://nodejs.org/) (v22+)
-* [Express.js](https://expressjs.com/) (Roteamento e Rate Limiting)
+* [Node.js](https://nodejs.org/)
+* [Express.js](https://expressjs.com/) 
 * [SQLite3](https://sqlite.org/) + `better-sqlite3`
 * [Stripe API](https://stripe.com/)
 
-## 🚀 Como executar o projeto localmente
+---
+
+## Como executar o projeto localmente
 
 ### Pré-requisitos
 * Node.js (versão 22 ou superior)
@@ -73,4 +75,4 @@ Este projeto foi construído sem o uso de frameworks pesados de front-end (como 
 5. Acesse `http://localhost:3000` no seu navegador.
 
 ---
-*Desenvolvido com ☕ e dedicação por [Seu Nome/Link do LinkedIn]*
+*Desenvolvido por Beatriz P. Rodrigues / https://www.linkedin.com/in/beatrizrd*
