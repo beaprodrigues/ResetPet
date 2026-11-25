@@ -1,5 +1,7 @@
 # ResetPet
 
+![Demonstração do ResetPet](img/demo.gif)
+
 ## Executar localmente
 
 Requer Node.js 22 ou superior e uma conta Stripe.
