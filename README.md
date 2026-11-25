@@ -1,78 +1,32 @@
-# ResetPet - E-commerce
+# ResetPet
 
-Site de e-commerce desenvolvido para a **ResetPet**, uma marca de produtos naturais e moduladores biofísicos para pets. O projeto engloba desde uma interface de usuário moderna e fluida até um back-end seguro para gerenciamento de contas, carrinho de compras e processamento de pagamentos.
+## Executar localmente
 
-## Destaques Técnicos
+Requer Node.js 22 ou superior e uma conta Stripe.
 
-Este projeto foi construído sem o uso de frameworks pesados de front-end (como React ou Vue), focando em performance, acessibilidade e domínio dos fundamentos da web. 
+1. Instale as dependências com `npm install`.
+2. Copie `.env.example` para `.env`.
+3. No `.env`, informe a chave secreta de teste da Stripe em `STRIPE_SECRET_KEY`. Nunca publique essa chave nem a coloque no código do navegador.
+4. Mantenha `APP_URL=http://localhost:3000` para testes locais.
+5. Inicie o servidor com `npm start` e abra `http://localhost:3000`.
 
-* **Front-end:** JavaScript organizado no padrão *Revealing Module Pattern* (ex: `CartModule`, `QuizModule`, `RevealModule`), garantindo isolamento de escopo e fácil manutenção.
-* **Performance e UI/UX:** Uso intensivo de CSS (Variáveis), animações CSS otimizadas, manipulação limpa de DOM e `IntersectionObserver` para revelar elementos na rolagem e carregar estatísticas dinamicamente.
-* **Autenticação:** Sistema de login e sessão construído do zero, utilizando a biblioteca nativa `node:crypto`. As senhas são protegidas com hash `scrypt` e `salt` dinâmico, e o gerenciamento de sessão é feito via cookies `HttpOnly` com validade de 14 dias.
-* **Banco de Dados:** Utilização do SQLite com modo `WAL` habilitado para performance em leituras/escritas concorrentes, gerenciando usuários, sessões e histórico de pedidos.
-* **Integração de Pagamentos:** Checkout seguro integrado à API da **Stripe**, incluindo o recebimento de Webhooks para atualização do status dos pedidos.
+Para executar a suíte automatizada, use `npm test`.
 
-## Funcionalidades
+Os dez produtos estão configurados a R$ 99,90 cada. Os valores usados no checkout são definidos e validados no servidor. Para publicar, configure `STRIPE_SECRET_KEY` e `APP_URL` como variáveis de ambiente no serviço de hospedagem; `APP_URL` deve ser a URL pública HTTPS do site.
 
-* **Catálogo e Carrinho:** Adição e remoção de produtos em tempo real com atualização de interface e cálculo de valores (R$) totais.
-* **Quiz Interativo:** Questionário em 5 etapas para recomendar o melhor produto para o pet, com redirecionamento inteligente para o WhatsApp, pré-preenchendo as respostas.
-* **Área do Cliente:** Cadastro, login e consulta de histórico de pedidos integrado ao banco de dados.
-* **Design Responsivo:** Interface fluida que com adaptação de tela, complementada com efeitos visuais modernos.
+## Contas e pedidos
 
-## Tecnologias Utilizadas
+Clientes podem criar uma conta com e-mail e senha de pelo menos 10 caracteres, entrar e consultar os pedidos associados à própria conta. O checkout exige login. As senhas são armazenadas com hash `scrypt`; a sessão usa cookie `HttpOnly` e expira após 14 dias.
 
-**Front-end:**
-* HTML5 
-* CSS3 (Grid, Flexbox, Variáveis)
-* JavaScript (ES6+)
+As contas e os pedidos são armazenados em `data/resetpet.sqlite`, que não deve ser enviado ao GitHub. Em produção, use um volume persistente para esse arquivo. Configure também `STRIPE_WEBHOOK_SECRET` para registrar pagamentos mesmo quando o cliente não retornar do checkout. O endpoint é `/api/stripe-webhook` e deve receber os eventos `checkout.session.completed`, `checkout.session.async_payment_succeeded` e `checkout.session.expired`.
 
-**Back-end:**
-* [Node.js](https://nodejs.org/)
-* [Express.js](https://expressjs.com/) 
-* [SQLite3](https://sqlite.org/) + `better-sqlite3`
-* [Stripe API](https://stripe.com/)
+Os planos de parceria exibidos no site ainda não são assinaturas Stripe vinculadas à conta. Recuperação de senha e verificação de e-mail exigem configurar um provedor de envio de e-mail antes da publicação.
 
----
+## Organização do código
 
-## Como executar o projeto localmente
-
-### Pré-requisitos
-* Node.js (versão 22 ou superior)
-* Conta de desenvolvedor na Stripe (para obter as chaves de API)
-
-### Passo a passo
-
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/SEU_USUARIO/resetpet-site.git
-   cd resetpet-site
-   ```
-
-2. **Instale as dependências:**
-   ```bash
-   npm install
-   ```
-
-3. **Configuração das Variáveis de Ambiente:**
-   Copie o arquivo de exemplo para criar o seu `.env`:
-   ```bash
-   cp .env.example .env
-   ```
-   Abra o arquivo `.env` e preencha as variáveis da Stripe:
-   ```env
-   STRIPE_SECRET_KEY=sk_test_sua_chave_aqui
-   STRIPE_WEBHOOK_SECRET=whsec_seu_segredo_webhook_aqui
-   APP_URL=http://localhost:3000
-   PORT=3000
-   ```
-   *Nota: O banco de dados SQLite será gerado automaticamente na pasta `/data` na primeira execução.*
-
-4. **Inicie o servidor de desenvolvimento:**
-   ```bash
-   npm start
-   ```
-
-5. Acesse `http://localhost:3000` no seu navegador.
-
----
-*Desenvolvido por Beatriz P. Rodrigues / https://www.linkedin.com/in/beatrizrd*
+- `server.js` inicia o servidor HTTP.
+- `server/` contém configuração, catálogo, preços e rotas separadas por domínio.
+- `auth-store.js` centraliza o banco SQLite, senhas e sessões.
+- `js/` contém módulos do navegador separados por funcionalidade; `js/main.mjs` inicializa a aplicação.
+- `index.html` mantém a estrutura da página e `style.css` reúne os estilos por seção.
+- `test/` contém testes de preço e de autenticação/privacidade dos pedidos.
